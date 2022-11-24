@@ -18,5 +18,3 @@ https://your-todos-list.netlify.app/
 
 - [@siddharth9300](https://www.github.com/siddharth9300)
 
-# react-todos-list
-# react-todos-list
