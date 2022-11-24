@@ -16,7 +16,7 @@ export const About = () => {
       <p className="mb-8 w-3/6 leading-relaxed">This is a todo list manager made by react and tailwind css source code can be find by clicking below button.</p>
     </div>
       <div className="flex justify-center">
-        <a href="https://github.com/siddharth9300/todos-list" rel="noreferrer" target="_blank" className="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Source Code - Github</a>
+        <a href="https://github.com/siddharth9300/react-todo-list" rel="noreferrer" target="_blank" className="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Source Code - Github</a>
       </div>
     </div>        
         
