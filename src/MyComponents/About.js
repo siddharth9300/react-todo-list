@@ -12,7 +12,7 @@ export const About = () => {
       <div className="text-center w-full">
       <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Your Todos List</h1>
       <div className="container mx-auto flex px-5 py-6 items-center justify-center flex-col">
-    <img className="lg:w-2/6 md:w-2/6 w-3/6 mb-10 ml-24 object-cover object-center rounded" alt="hero" src="./notes.png"/>
+        <img className=" w-48 mb-10 ml-16" alt="hero" src="./notes.png"/>
       <p className="mb-8 w-3/6 leading-relaxed">This is a todo list manager made by react and tailwind css source code can be find by clicking below button.</p>
     </div>
       <div className="flex justify-center">
