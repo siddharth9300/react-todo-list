@@ -14,7 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Live App
 
-https://your-todos-list.netlify.app/
+ [https://your-todos-list.netlify.app/](https://your-todos-list.netlify.app/)
+ 
+ 
 ## Authors
 
 - [@siddharth9300](https://www.github.com/siddharth9300)
