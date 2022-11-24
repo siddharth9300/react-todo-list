@@ -1,5 +1,6 @@
 # Your Todos List
-Using React and Bootstrap.
+This is a todo list manager made by react and tailwind css.
+
 
 ## Available Scripts
 
