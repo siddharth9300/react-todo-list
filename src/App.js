@@ -68,7 +68,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header title="Your Todos List" searchBar={false} />
+        <Header title="Your Todo List" searchBar={false} />
 
         <Switch>
           <Route
@@ -88,7 +88,7 @@ function App() {
           </Route>
         </Switch>
 
-        <Footer title="Your Todos List" />
+        <Footer title="Your Todo List" />
       </Router>
     </>
   );
