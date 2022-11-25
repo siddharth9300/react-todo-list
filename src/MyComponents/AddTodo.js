@@ -5,14 +5,14 @@ export const AddTodo = ({addTodo}) => {
   const [desc, setDesc] = useState("");
   const submit = (e) => {
     e.preventDefault();
-    if (!title || !desc) {
-      alert("Title and discription can not be blank");
-    }else{
+    // if (!title || !desc) {
+    //   alert("Title and discription can not be blank");
+    // }else{
 
         addTodo(title, desc);
         setTitle("");
         setDesc("");
-    }
+    // }
   };
   return (
     <>
@@ -23,14 +23,14 @@ export const AddTodo = ({addTodo}) => {
       {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p> */}
     </div>
     <div className="lg:w-1/2 md:w-2/3 mx-auto">
-      <div className="flex flex-wrap -m-2">
+        <form className="flex flex-wrap -m-2" onSubmit={submit}>
         <div className="p-2 w-full">
           <div className="relative">
             <label for="name" className="leading-7 text-sm text-gray-600">Title</label>
             <input type="text" id="name" name="name" value={title} onChange={(e) => {
               setTitle(e.target.value);
             }}
-            required className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+            className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
           </div>
         </div>
 
@@ -38,19 +38,18 @@ export const AddTodo = ({addTodo}) => {
           <div className="relative">
             <label for="message" className="leading-7 text-sm text-gray-600">Description</label>
             <textarea id="message" name="message"  value={desc}
-            required
+            
             onChange={(e) => {
               setDesc(e.target.value);
-            }} className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            }} className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"/>
           </div>
         </div>
         <div className="p-2 w-full">
-          <button className="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onClick={submit}>Button</button>
+          <button type="submit" className="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" >Add</button>
         </div>
 
 
-
-      </div>
+        </form>
     </div>
         <hr className="my-8 h-px w-full h-1 bg-gray-200 rounded border-0 border-0 dark:bg-gray-300"/>
   </div>

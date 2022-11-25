@@ -40,7 +40,7 @@ function App() {
       );
 
       localStorage.setItem("todos", JSON.stringify(todos));
-    }, 1000); // end delay
+    }, 700); // end delay
   };
 
   const addTodo = (title, desc) => {
