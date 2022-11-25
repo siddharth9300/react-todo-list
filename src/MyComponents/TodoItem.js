@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../App.css";
 export const TodoItem = ({todo ,onDelete}) => {
   return (
 
@@ -9,13 +9,18 @@ export const TodoItem = ({todo ,onDelete}) => {
     <div className="-my-8 divide-y-2 divide-gray-100">
 
       <div className="py-8 flex flex-wrap md:flex-nowrap">
-        <div className="md:w-32 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span className="font-semibold text-2xl title-font text-gray-900">{todo.sno+1}</span>
+        <div className="md:w-16 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-red-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          {/* <span className="font-semibold text-2xl title-font text-gray-900" id={"sno"+todo.sno}>{todo.sno+1}</span> */}
         </div>
         <div className="md:flex-grow">
-          <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">{todo.title}</h2>
-          <p className="leading-relaxed">{todo.desc}</p>
-          <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 inline-flex items-center mt-4 focus:outline-none hover:bg-red-600 rounded" onClick={()=>{onDelete(todo)}}>Done</button>
+          <h2 className="text-2xl font-medium text-gray-900 title-font mb-2" id={"title"+todo.sno}>{todo.title}</h2>
+          <p className="leading-relaxed" id={"desc"+todo.sno}>{todo.desc}</p>
+          <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 inline-flex items-center mt-4 focus:outline-none hover:bg-red-600 rounded del-btn" onClick={()=>{onDelete(todo)}}>Done</button>
         
         </div>
       </div>

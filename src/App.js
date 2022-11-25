@@ -4,8 +4,10 @@ import { Todos } from "./MyComponents/Todos";
 import { Footer } from "./MyComponents/Footer";
 import { AddTodo } from "./MyComponents/AddTodo";
 import { About } from "./MyComponents/About";
+import { TodoItem } from "./MyComponents/TodoItem";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { setTimeout } from "timers/promises";
 
 function App() {
   let initTodo;
@@ -18,13 +20,28 @@ function App() {
   const onDelete = (todo) => {
     console.log("I am on Delete of ", todo);
 
-    setTodos(
-      todos.filter((e) => {
-        return e !== todo;
-      })
-    );
+    // document.getElementById("sno" + todo.sno).style.textDecoration ="line-through";
+    document.getElementById("title" + todo.sno).style.textDecoration ="line-through";
+    document.getElementById("desc" + todo.sno).style.textDecoration ="line-through";
 
-    localStorage.setItem("todos", JSON.stringify(todos));
+    var delay = (function () {
+      var timer = 0;
+      return function (callback, ms) {
+        clearTimeout(timer);
+        timer = setTimeout(callback, ms);
+      };
+    })();
+
+    delay(function () {
+      // do stuff
+      setTodos(
+        todos.filter((e) => {
+          return e !== todo;
+        })
+      );
+
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }, 1000); // end delay
   };
 
   const addTodo = (title, desc) => {
