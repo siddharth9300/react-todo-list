@@ -23,7 +23,7 @@ export const TodoItem = ({todo ,onDelete}) => {
         <div className="md:flex-grow">
           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2" id={"title"+todo.sno}>{todo.title}</h2>
           <p className="leading-relaxed" id={"desc"+todo.sno}>{todo.desc}</p>
-          <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 inline-flex items-center mt-4 focus:outline-none hover:bg-red-600 rounded del-btn" onClick={()=>{onDelete(todo)}}>Done</button>
+          <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 items-center mt-4 focus:outline-none hover:bg-red-600 rounded del-btn" onClick={()=>{onDelete(todo)}}>Done</button>
         
         </div>
       </div>

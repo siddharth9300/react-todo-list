@@ -15,7 +15,7 @@ export const Todos = (props) => {
         </div>
   </div>
   
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base max-md:ml-8 font-medium text-gray-900">
 
     {props.todos.length===0?
     // (<TodoItem todo={"No Todo to Display!"}  />)

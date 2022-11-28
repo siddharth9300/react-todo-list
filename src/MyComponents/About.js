@@ -5,15 +5,15 @@ export const About = () => {
 <>
 
 <section className="text-gray-600 body-font mb-12 ">
-  <div className="container px-5 py-12 mx-auto">
-    <div className="flex flex-col text-center w-full ">
+  <div className="container px-5 py-12 mx-auto ">
+    <div className="flex flex-col text-center w-full max-md:mt-6">
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-10 text-gray-900">About</h1>
       </div>
       <div className="text-center w-full">
       <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Your Todo List</h1>
       <div className="container mx-auto flex px-5 py-6 items-center justify-center flex-col">
-    <img className="w-64 mb-10 ml-12 object-cover object-center rounded" alt="hero" src="./notes.png"/>
-      <p className="mb-8 w-3/6 leading-relaxed">This is a todo list manager made by react and tailwind css source code can be find by clicking below button.</p>
+    <img className="w-64 mb-10 ml-12 max-md:w-32 object-cover object-center rounded" alt="hero" src="./notes.png"/>
+      <p className="mb-8 w-3/6 max-md:w-5/6 leading-relaxed">This is a todo list manager made by react and tailwind css source code can be find by clicking below button.</p>
     </div>
       <div className="flex justify-center">
         <a href="https://github.com/siddharth9300/react-todo-list" rel="noreferrer" target="_blank" className=" inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Source Code - Github</a>

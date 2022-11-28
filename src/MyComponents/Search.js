@@ -3,7 +3,7 @@ import { Sresult } from "./Sresult";
 
 export const Search = () => {
   const initTodo = JSON.parse(localStorage.getItem("todos"));
-  console.log(initTodo.title + "this is search");
+  // console.log(initTodo.title + "this is search");
   const [query, setQuery] = useState("");
   const [hasFocus, setFocus] = useState(false);
 
@@ -25,7 +25,7 @@ export const Search = () => {
   return (
     <>
   
-      <div className="relative w-96 z-20 p-5  md:flex-row">
+      <div className="relative w-96 z-20  p-5  md:flex-row">
  
           <div className="flex justify-between overflow-hidden rounded-md bg-white shadow shadow-black/20 items-end">
             <input
