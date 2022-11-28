@@ -4,8 +4,12 @@ import { Todos } from "./MyComponents/Todos";
 import { Footer } from "./MyComponents/Footer";
 import { AddTodo } from "./MyComponents/AddTodo";
 import { About } from "./MyComponents/About";
+// import { Search } from "./MyComponents/Search";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { Sresult } from "./MyComponents/Sresult";
+// import { Search } from "./MyComponents/Search";
+// import { Sresult } from "./MyComponents/Sresult";
 // import { setTimeout } from "timers/promises";
 
 function App() {
@@ -16,12 +20,15 @@ function App() {
     initTodo = JSON.parse(localStorage.getItem("todos"));
   }
 
+
   const onDelete = (todo) => {
     console.log("I am on Delete of ", todo);
 
     // document.getElementById("sno" + todo.sno).style.textDecoration ="line-through";
-    document.getElementById("title" + todo.sno).style.textDecoration ="line-through";
-    document.getElementById("desc" + todo.sno).style.textDecoration ="line-through";
+    document.getElementById("title" + todo.sno).style.textDecoration =
+      "line-through";
+    document.getElementById("desc" + todo.sno).style.textDecoration =
+      "line-through";
 
     var delay = (function () {
       var timer = 0;
@@ -52,23 +59,27 @@ function App() {
       sno = todos[todos.length - 1].sno + 1;
     }
     const myTodo = {
+    
       sno: sno,
       title: title,
       desc: desc,
     };
     setTodos([...todos, myTodo]);
-    console.log(myTodo);
+    // console.log(myTodo);
   };
 
   const [todos, setTodos] = useState(initTodo);
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
+    // console.log(todos);
   }, [todos]);
 
   return (
     <>
       <Router>
-        <Header title="Your Todo List" searchBar={false} />
+        <Header title="Your Todo List"
+        //  sresult={sresult} 
+         />
 
         <Switch>
           <Route

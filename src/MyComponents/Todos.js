@@ -8,13 +8,6 @@ export const Todos = (props) => {
 
 <>
 
-
-
-
-
-
-
-
 <section className="text-gray-600 body-font mb-24">
   <div className="container px-5 py-12 mx-auto">
     <div className="flex flex-col text-center w-full ">
@@ -23,8 +16,10 @@ export const Todos = (props) => {
   </div>
   
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-     
-    {props.todos.length===0?"No Todo to Display!":
+
+    {props.todos.length===0?
+    // (<TodoItem todo={"No Todo to Display!"}  />)
+    "No Todo to Display!":
         props.todos.map((todo)=>{
           return (<TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete}/>)
         })}
