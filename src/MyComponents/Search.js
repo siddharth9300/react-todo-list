@@ -43,14 +43,14 @@ export const Search = () => {
 
         {(initTodo.filter((stodos) => stodos.title.toLowerCase().includes(query))
           .length === 0) && (hasFocus===true)
-          ? (<Sresult title = {"No Todo Found"}/> )
+          ? (<Sresult title = {"No Todo Found"}/>)
           : initTodo
               .filter((stodos) => stodos.title.toLowerCase().includes(query))
               .map((stodo) => {
                
-                // if (query.length === 0) {
-                //   return null;
-                // } else {
+                if (query.length === 0) {
+                  return null;
+                } else {
                   return (
                     <Sresult
                       sno={stodo.sno}
@@ -59,7 +59,7 @@ export const Search = () => {
                       desc={stodo.desc}
                     />
                   );
-                // }
+                }
               })}
 
  
