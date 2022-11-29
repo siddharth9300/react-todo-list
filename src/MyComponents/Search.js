@@ -42,7 +42,10 @@ export const Search = () => {
  
 
         {(initTodo.filter((stodos) => stodos.title.toLowerCase().includes(query))
-          .length === 0) && (hasFocus===true)
+          // .length === 0
+          === null
+          ) 
+          && (hasFocus===true)
           ? (<Sresult title = {"No Todo Found"}/>)
           : initTodo
               .filter((stodos) => stodos.title.toLowerCase().includes(query))
