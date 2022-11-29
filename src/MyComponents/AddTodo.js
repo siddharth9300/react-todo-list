@@ -26,7 +26,7 @@ export const AddTodo = ({addTodo}) => {
         <form className="flex flex-wrap -m-2" onSubmit={submit}>
         <div className="p-2 w-full">
           <div className="relative">
-            <label for="name" className="leading-7 text-sm text-gray-600">Title</label>
+            <label htmlFor="name" className="leading-7 text-sm text-gray-600">Title</label>
             <input type="text" id="name" name="name" value={title} onChange={(e) => {
               setTitle(e.target.value);
             }}
@@ -36,7 +36,7 @@ export const AddTodo = ({addTodo}) => {
 
         <div className="p-2 w-full">
           <div className="relative">
-            <label for="message" className="leading-7 text-sm text-gray-600">Description</label>
+            <label htmlFor="message" className="leading-7 text-sm text-gray-600">Description</label>
             <textarea id="message" name="message"  value={desc}
             
             onChange={(e) => {
@@ -86,7 +86,7 @@ export const AddTodo = ({addTodo}) => {
       <h3 className="text-center">Add a Toto</h3>
       <form onSubmit={submit}>
         <div className="">
-          <label htmlFor="title" className="form-label">
+          <label htmlhtmlFor="title" className="form-label">
             Title
           </label>
           <input
@@ -102,7 +102,7 @@ export const AddTodo = ({addTodo}) => {
           />
         </div>
         <div className="mt-3">
-          <label htmlFor="desc" className="form-label desc">
+          <label htmlhtmlFor="desc" className="form-label desc">
             Toto Description
           </label>
           <input
