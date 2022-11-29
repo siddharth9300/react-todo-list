@@ -28,10 +28,8 @@ export const Search = () => {
     
     
     var fil = initTodo.filter((stodos) => stodos.title.toLowerCase().includes(query));
-    if (fil.length === 0) {
+    if (fil === undefined || fil === null || fil.length ===0) {
       var check = 0;
-    }else{
-      var l = fil;
     }
   }
   return (
@@ -51,16 +49,14 @@ export const Search = () => {
             />
  
           </div>
- 
+    
 
         {(check === 0)
           && (hasFocus===true)
           ? (<Sresult title = {"No Todo Found"}/>)
-          :  (l === undefined || l=== null) ? 
-            (<Sresult title = {"No Todo Found"}/>)
           :
           
-          l.map((stodo) => {
+          fil.map((stodo) => {
                
                 if (query.length === 0) {
                   return null;
@@ -84,3 +80,6 @@ export const Search = () => {
 };
 
 export default Search;
+
+          // :  (l === undefined || l=== null) || (query.length === 0) ? 
+          //     null
