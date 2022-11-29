@@ -48,9 +48,9 @@ export const Search = () => {
               .filter((stodos) => stodos.title.toLowerCase().includes(query))
               .map((stodo) => {
                
-                if (query.length === 0) {
-                  return null;
-                } else {
+                // if (query.length === 0) {
+                //   return null;
+                // } else {
                   return (
                     <Sresult
                       sno={stodo.sno}
@@ -59,7 +59,7 @@ export const Search = () => {
                       desc={stodo.desc}
                     />
                   );
-                }
+                // }
               })}
 
  
