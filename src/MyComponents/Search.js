@@ -3,16 +3,19 @@ import { Sresult } from "./Sresult";
 
 export const Search = () => {
   const initTodo = JSON.parse(localStorage.getItem("todos"));
-  // console.log(initTodo.title + "this is search");
+  // var fil = "";
   const [query, setQuery] = useState("");
+ 
+  // console.log(initTodo.title + "this is search");
   const [hasFocus, setFocus] = useState(false);
-
+  
   const inputEvent = (e) => {
     const data = e.target.value.toLowerCase();
-
+    
     if (data.length === 0)   {
+
       setQuery("");
-      initTodo.title = "No Todo Found";
+      
     } else {
       setQuery(data);
       // initTodo.title = initTodo.filter((asd) =>
@@ -21,7 +24,12 @@ export const Search = () => {
     }
     console.log(data);
   };
+  if (initTodo != null) {
+    
+    
+    var fil = initTodo.filter((stodos) => stodos.title.toLowerCase().includes(query));
 
+  }
   return (
     <>
   
@@ -41,15 +49,12 @@ export const Search = () => {
           </div>
  
 
-        {(initTodo.filter((stodos) => stodos.title.toLowerCase().includes(query))
-          // .length === 0
-          === null
+        {(fil.length === 0
+          // === null
           ) 
           && (hasFocus===true)
           ? (<Sresult title = {"No Todo Found"}/>)
-          : initTodo
-              .filter((stodos) => stodos.title.toLowerCase().includes(query))
-              .map((stodo) => {
+          : fil.map((stodo) => {
                
                 if (query.length === 0) {
                   return null;
