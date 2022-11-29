@@ -28,7 +28,9 @@ export const Search = () => {
     
     
     var fil = initTodo.filter((stodos) => stodos.title.toLowerCase().includes(query));
-
+    if (fil.length ===0) {
+      fil = null
+    }
   }
   return (
     <>
@@ -49,8 +51,8 @@ export const Search = () => {
           </div>
  
 
-        {(fil.length === 0
-          // === null
+        {(fil
+          === null
           ) 
           && (hasFocus===true)
           ? (<Sresult title = {"No Todo Found"}/>)
