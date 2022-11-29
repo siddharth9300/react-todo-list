@@ -49,7 +49,7 @@ export const Search = () => {
               .map((stodo) => {
                
                 if (query.length === 0) {
-                  return initTodo.title = "No Todo Found";
+                  return null;
                 } else {
                   return (
                     <Sresult
