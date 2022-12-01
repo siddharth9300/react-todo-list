@@ -7,9 +7,9 @@ export const TodoItem = ({todo ,onDelete}) => {
 
   return (
 
-<section className="text-gray-600 body-font overflow-hidden" id={"scroll-"+todo.sno}>
-  <div className="container px-5 py-12 mx-auto">
-    <div className="-my-8 divide-y-2 divide-gray-100">
+<section className="text-gray-600 body-font overflow-hidden dark:bg-slate-900" id={"scroll-"+todo.sno}>
+  <div className="container  px-5 py-6 mx-auto">
+    <div className=" divide-y-2  divide-gray-100">
 
       <div className="py-8 flex flex-wrap md:flex-nowrap">
         <div className="md:w-16 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
@@ -21,8 +21,8 @@ export const TodoItem = ({todo ,onDelete}) => {
           {/* <span className="font-semibold text-2xl title-font text-gray-900" id={"sno"+todo.sno}>{todo.sno+1}</span> */}
         </div>
         <div className="md:flex-grow">
-          <h2 className="text-2xl font-medium text-gray-900 title-font mb-2" id={"title"+todo.sno}>{todo.title}</h2>
-          <p className="leading-relaxed" id={"desc"+todo.sno}>{todo.desc}</p>
+          <h2 className="text-2xl font-medium dark:text-white text-gray-900 title-font mb-2" id={"title"+todo.sno}>{todo.title}</h2>
+          <p className="leading-relaxed dark:text-gray-200" id={"desc"+todo.sno}>{todo.desc}</p>
           <button className="flex text-white bg-red-500 border-0 py-2 px-6 items-center mt-4 focus:outline-none hover:bg-red-600 rounded del-btn" onClick={()=>{onDelete(todo)}}>Done</button>
         
         </div>

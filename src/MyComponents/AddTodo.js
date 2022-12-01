@@ -16,32 +16,32 @@ export const AddTodo = ({addTodo}) => {
   };
   return (
     <>
-<section className="text-gray-600 body-font relative ">
+<section className="text-gray-600 dark:text-white dark:bg-slate-900 body-font relative ">
   <div className="container px-5 pt-24 mx-auto ">
     <div className="flex flex-col text-center w-full max-md:mt-10 mb-6">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Add a Todo</h1>
+      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 dark:text-white text-gray-900">Add a Todo</h1>
       {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p> */}
     </div>
     <div className="lg:w-1/2 md:w-2/3 mx-auto">
         <form className="flex flex-wrap -m-2" onSubmit={submit}>
         <div className="p-2 w-full">
           <div className="relative">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-600">Title</label>
+            <label htmlFor="name" className="leading-7 text-sm dark:text-white text-gray-600">Title</label>
             <input type="text" id="name" name="name" value={title} onChange={(e) => {
               setTitle(e.target.value);
             }}
-            className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
+            className="w-full bg-gray-100 dark:bg-opacity-80  bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required />
           </div>
         </div>
 
         <div className="p-2 w-full">
           <div className="relative">
-            <label htmlFor="message" className="leading-7 text-sm text-gray-600">Description</label>
+            <label htmlFor="message" className="leading-7 text-sm dark:text-white text-gray-600">Description</label>
             <textarea id="message" name="message"  value={desc}
             
             onChange={(e) => {
               setDesc(e.target.value);
-            }} className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"/>
+            }} className="w-full bg-gray-100 dark:bg-opacity-80 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"/>
           </div>
         </div>
         <div className="p-2 w-full">
@@ -51,7 +51,7 @@ export const AddTodo = ({addTodo}) => {
 
         </form>
     </div>
-        <hr className="my-8 w-full h-1 bg-gray-200 rounded border-0 dark:bg-gray-300"/>
+        <hr className="mt-8 w-full h-1 bg-gray-200 rounded border-0 dark:bg-gray-300"/>
   </div>
 </section>
 

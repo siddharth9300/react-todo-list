@@ -35,9 +35,8 @@ export const Search = () => {
   return (
     <>
   
-      <div className="relative w-96 z-20  p-5  md:flex-row">
- 
-          <div className="flex justify-between overflow-hidden rounded-md bg-white shadow shadow-black/20 items-end">
+      <div className="relative w-96 z-20 max-md:w-72  p-5 md:mr-24 md:flex-row">
+          <div className="flex justify-between overflow-hidden rounded-md bg-white shadow shadow-black/20">
             <input
               type="text"
               className="block w-full flex-1 py-2 px-3 rounded focus:outline-none bg-gray-200 hover:bg-gray-300"

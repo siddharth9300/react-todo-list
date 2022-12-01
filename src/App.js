@@ -13,6 +13,24 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { setTimeout } from "timers/promises";
 
 function App() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   let initTodo;
   if (localStorage.getItem("todos") === null) {
     initTodo = [];
@@ -79,6 +97,7 @@ function App() {
       <Router>
         <Header title="Your Todo List"
         //  sresult={sresult} 
+        
          />
 
         <Switch>
