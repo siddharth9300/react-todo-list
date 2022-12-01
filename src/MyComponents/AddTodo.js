@@ -17,7 +17,7 @@ export const AddTodo = ({addTodo}) => {
   return (
     <>
 <section className="text-gray-600 dark:text-white dark:bg-slate-900 body-font relative ">
-  <div className="container px-5 pt-24 mx-auto ">
+  <div className="container px-5 pt-32 mx-auto ">
     <div className="flex flex-col text-center w-full max-md:mt-10 mb-6">
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 dark:text-white text-gray-900">Add a Todo</h1>
       {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p> */}
