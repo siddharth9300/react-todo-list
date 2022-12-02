@@ -1,4 +1,4 @@
-# Your Todos List
+# Your Todo List
 This is a todo list manager made by react and tailwind css.
 
 
