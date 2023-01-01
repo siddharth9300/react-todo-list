@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Sresult } from "./Sresult";
+import { Sresult } from "./Sresult. js";
 
 export const Search = () => {
   const initTodo = JSON.parse(localStorage.getItem("todos"));
