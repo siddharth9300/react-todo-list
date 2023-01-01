@@ -1,5 +1,5 @@
 import React from "react";
-import {Search} from './Search. js'
+// import {Search} from './Search. js'
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Dark from "./Dark";
@@ -45,7 +45,7 @@ export default function Header(props) {
 
       <div className="fixed z-10 h-0 flex max-md:flex-row flex-row-reverse w-full max-md:mt-12 ">
      
-    <Search/>   
+    {/* <Search/>    */}
     </div>
         <div className='justify h-0 md:mr-32 w-full fixed z-50 max-md:mt-16 mt-2 flex flex-row-reverse'>
       <Dark/>
